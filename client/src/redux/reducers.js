@@ -8,6 +8,8 @@ function reducer(state = initState, action) {
             return Object.assign({}, state, {
                 lat: action.lat,
                 lon: action.lon,
+                temp: action.temp,
+                name: action.name,
                 weather: action.weather
             });
 

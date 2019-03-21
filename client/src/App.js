@@ -5,6 +5,7 @@ import IntroPage from './components/IntroPage';
 import './App.css';
 
 class ConnectApp extends Component {
+  
   render() {
     return (
       <div id="page">

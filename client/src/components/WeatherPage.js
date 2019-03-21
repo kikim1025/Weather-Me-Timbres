@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-//import {  } from '../redux/actions';
 import './WeatherPage.css';
 
 class ConnectWeatherPage extends React.Component {
@@ -10,7 +9,7 @@ class ConnectWeatherPage extends React.Component {
             <div>
                 <div>Latitude: {this.props.lat}</div>
                 <div>Longitude: {this.props.lon}</div>
-                <div>Weather: {this.props.weather}</div>
+                
             </div>
         );
     };
