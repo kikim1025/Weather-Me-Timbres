@@ -11,7 +11,6 @@ export function getData() {
                     let lon = pos.coords.longitude;
                     $.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${API_KEY}&units=imperial`)
                     .then((res) => {
-                        console.log(res.data);
                         dispatch({ type: GET_DATA, 
                             lat: Number(lat.toFixed(2)),
                             lon: Number(lon.toFixed(2)),
