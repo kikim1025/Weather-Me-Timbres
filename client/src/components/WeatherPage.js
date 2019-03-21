@@ -6,10 +6,12 @@ class ConnectWeatherPage extends React.Component {
 
     render() {
         return (
-            <div>
-                <div>Latitude: {this.props.lat}</div>
-                <div>Longitude: {this.props.lon}</div>
-                
+            <div id='page--weather'>
+                <div className='slot'>Latitude: {this.props.lat}</div>
+                <div className='slot'>Longitude: {this.props.lon}</div>
+                <div className='slot'>Location: {this.props.name}</div>
+                <div className='slot'>Weather: {this.props.weather}</div>
+                <div className='slot'>Temperature: {this.props.temp}F</div>
             </div>
         );
     };
@@ -19,6 +21,8 @@ const mapStateToProps = (state) => {
     return {
         lat: state.lat,
         lon: state.lon,
+        temp: state.temp,
+        name: state.name,
         weather: state.weather
     };
 };

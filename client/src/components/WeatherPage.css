@@ -1,0 +1,32 @@
+#page--weather {
+    background-color: rgba(238, 255, 254, 0.918);
+    border: 2px solid rgb(3, 4, 56);
+    border-radius: 200px;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size: 35px;
+    margin: auto;
+    margin-top: 15vh;
+    padding: 40px 0px 40px 0px;
+    text-align: center;
+    width: 750px;
+}
+
+#page--weather:hover {
+    border-radius: 5px;
+    transition: border-radius 1s;
+}
+
+.slot {
+    background-color: rgba(255, 238, 254, 0.918);
+    border: 2px solid rgb(56, 3, 28);
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    width: 375px;
+}
+
+.slot:hover {
+    border-radius: 50px;
+    transform: scale(1.5);
+    transition: border-radius 1s, transform .5s;
+}

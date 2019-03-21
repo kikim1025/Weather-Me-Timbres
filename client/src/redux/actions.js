@@ -17,11 +17,7 @@ export function getData() {
                             lon: Number(lon.toFixed(2)),
                             temp: res.data.main.temp,
                             name: res.data.name,
-                            weather: {
-                                main: res.data.weather[0].main,
-                                desc: res.data.weather[0].description                      
-                            }
-
+                            weather: res.data.weather[0].main
                         });
                     });
                 }

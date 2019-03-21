@@ -11,17 +11,20 @@ class ConnectIntroPage extends React.Component {
     }
 
     handleLocate = () => {
+        this.setState({ alert: !this.state.alert });
         this.props.getData();
     };
     
     render() {
         return (
-            <div>
-                <button id='button--location' onClick={this.handleLocate}>Get Weather</button>
-                {this.state.alert
-                    ? <div id='alert'>When the browser prompt appears, please allow permission for location for weather analysis</div>
-                    : <div></div>
-                }
+            <div id='page--intro'>
+                <button id='button' onClick={this.handleLocate}>Current Weather</button>
+                <div id='alert'>
+                    { this.state.alert
+                        ? 'If the browser prompt appears, please allow permission for location for weather analysis'
+                        : 'Please click the button to request weather data'
+                    }
+                </div>
             </div>
         );
     };

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import WeatherPage from './components/WeatherPage';
 import IntroPage from './components/IntroPage';
-import './App.css';
 
 class ConnectApp extends Component {
   
