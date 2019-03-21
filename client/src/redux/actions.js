@@ -1,13 +1,21 @@
 import $ from 'axios';
-import { GET_LOC} from '../constants/constants';
+import { GET_LOC } from '../constants/constants';
 
 
-export function getWeather() {
-    navigator.geolocation.getCurrentPosition(
-        function(pos) {
-            console.log(pos);
-        }
-    );
+export function getLoc() {
+    return function(dispatch) {
+        return (
+            navigator.geolocation.getCurrentPosition(
+                function(pos) {
+                    dispatch({ type: GET_LOC, 
+                            lat: pos.coords.latitude,
+                            lon: pos.coords.longitude,
+                            weather: 'asdf'
+                    });
+                }
+            )
+        ); 
+    };
 };
 
 // 
@@ -17,7 +25,7 @@ export function getWeather() {
         return (
             $.get('')
             .then((res) => {
-                dispatch({ type: GET_DATA, payload: res.data.data });
+                
             })
         );    
     };
