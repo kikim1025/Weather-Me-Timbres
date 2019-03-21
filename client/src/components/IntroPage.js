@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getLoc } from '../redux/actions';
+import { getData } from '../redux/actions';
 import './IntroPage.css';
 
 class ConnectIntroPage extends React.Component {
 
     handleLocate = () => {
-        this.props.getLoc();
+        this.props.getData();
     };
     
     render() {
@@ -21,7 +21,7 @@ class ConnectIntroPage extends React.Component {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        getLoc: () => dispatch(getLoc())
+        getData: () => dispatch(getData())
     };
 };
 

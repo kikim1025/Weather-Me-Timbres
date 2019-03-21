@@ -1,10 +1,10 @@
-import { API_KEY, GET_LOC} from '../constants/constants';
+import { GET_DATA} from '../constants/constants';
 
 const initState = {};
 
 function reducer(state = initState, action) {
     switch (action.type) {
-        case GET_LOC:
+        case GET_DATA:
             return Object.assign({}, state, {
                 lat: action.lat,
                 lon: action.lon,
